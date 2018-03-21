@@ -10,9 +10,11 @@ function computerPlay() {
   }
 }
 
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * (max));
 }
+
 
 function playerSelection() {
   let choice = null;
@@ -24,13 +26,16 @@ function playerSelection() {
   return choice;
 }
 
+
 function win(c) {
    alert(`You win! The computer chose ${c}`);
 }
 
+
 function lose(c) {
   alert(`You lose! The computer chose ${c}`);
 }
+
 
 function playRound () {
   const p = playerSelection();
@@ -46,5 +51,6 @@ function playRound () {
     lose(c);
   }
 }
+
 
 playRound();
