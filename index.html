@@ -2,62 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <script type="text/javascript">
-
-    function computerPlay() {
-      const randomNumber = getRandomInt(1, 3);
-
-      if (randomNumber === 1) {
-        return 'rock';
-      } else if (randomNumber === 2) {
-        return 'paper';
-      } else {
-        return 'scissors';
-      }
-    }
-
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    function playerSelection() {
-      let choice = null;
-
-      while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissors') {
-        choice = prompt('Please choose either rock, paper, or scissors').toLowerCase();
-      }
-
-      return choice;
-    }
-
-    function win(c) {
-       alert(`You win! The computer chose ${c}`);
-    }
-
-    function lose(c) {
-      alert(`You lose! The computer chose ${c}`);
-    }
-
-    function playRound () {
-      const p = playerSelection();
-      const c = computerPlay();
-      const result = [p, c];
-      const wins = [['rock', 'scissors'], ['paper', 'rock'], ['scissors', 'paper']];
-
-      if (p === c) {
-        alert(`Both players chose ${p}, the game is a draw.`);
-      } else if (wins.indexOf(result) !== -1) {
-        win(c);
-      } else {
-        lose(c);
-      }
-    }
-
-    playRound();
-
-    </script>
+    <script type="text/javascript" src="rps.js"></script>
   </body>
 </html>
