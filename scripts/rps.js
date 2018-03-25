@@ -15,7 +15,8 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * (max));
 }
 
-function lightText() {
+
+function flashBackground() {
   document.querySelector('.rtext').style.backgroundColor = '#d66304';
   document.querySelector('.result').style.backgroundColor = '#d66304';
 }
@@ -28,7 +29,7 @@ function win(c, resultText) {
   document.querySelector('.result').style.backgroundColor = 'white';
   playerScore.textContent = ++playerScoreText;
   setTimeout(function() {
-    lightText();
+    flashBackground();
     resultText.textContent = `You win! The computer chose ${c}. Choose again.`;
   }, 40);
   checkWinner('player', Number(playerScore.textContent), resultText);
@@ -42,7 +43,7 @@ function lose(c, resultText) {
   document.querySelector('.result').style.backgroundColor = 'white';
   computerScore.textContent = ++computerScoreText;
   setTimeout(function(){
-    lightText();
+    flashBackground();
     resultText.textContent = `You lose! The computer chose ${c}. Choose again.`;
   }, 40);
   checkWinner('computer', Number(computerScore.textContent), resultText);
@@ -54,7 +55,7 @@ function draw(c, resultText) {
   document.querySelector('.rtext').style.backgroundColor = 'white';
   document.querySelector('.result').style.backgroundColor = 'white';
   setTimeout(function() {
-    lightText();
+    flashBackground();
     resultText.textContent = `Both players chose ${c}, the game is a draw. Choose again.`;
   }, 40);
 
