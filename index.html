@@ -3,8 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="images" href="images">
+    <link href="https://fonts.googleapis.com/css?family=Mina:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Indie+Flower" rel="stylesheet">
   </head>
   <body>
+
+    <div class="navbar">
+      <ul>
+        <li class="brand"><a href="./index.html">ROCKpaperSCISSORS</a></li>
+      </ul>
+    </div>
+
+    <div class="results">
+      <div class="scoreboard left blank">blank</div>
+      <div class="scoreboard right">Score</div>
+      <div class="scoreboard left">Player</div>
+      <div class="scoreboard right" id="pscore">0</div>
+      <div class="scoreboard left">Computer</div>
+      <div class="scoreboard right" id="cscore">0</div>
+    </div>
+
+    <div class="start">
+      <button class="sb" type="button">Start New Game</button>
+    </div>
+
+    <div class="bottom">
+      <button class="choice rock" type="button" id="rockbutton"><img src="images/rock.png" id="rpic"></button>
+      <button class="choice paper" type="button" id="paperbutton"><img src="images/paper.png" id="ppic"></button>
+      <button class="choice scissors" type="button" id="scissorsbutton"><img src="images/scissors.jpg" id="spic"></button>
+      <div class="result"><span class="rtext"></span></div>
+    </div>
+
     <script type="text/javascript" src="scripts/rps.js"></script>
   </body>
 </html>
