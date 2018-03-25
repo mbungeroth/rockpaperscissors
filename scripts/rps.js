@@ -78,7 +78,7 @@ function playRound (p) {
 
 function checkWinner(winner, score, resultText) {
   if (score === 5 && winner === 'player') {
-    resultText.textContent = 'YOU WIN!!!';
+    setTimeout(function() {resultText.textContent = 'YOU WIN!!!';}, 50)
     btns.forEach((elem) => elem.style.visibility = 'hidden');
     removeDirectionsButton();
     makePlayAgainButton()
@@ -88,7 +88,7 @@ function checkWinner(winner, score, resultText) {
     icon.src = 'images/trophy.png';
     bot.appendChild(icon);
   } else if (score === 5 && winner === 'computer') {
-    resultText.textContent = 'YOU LOSE.';
+    setTimeout(function() {resultText.textContent = 'YOU LOSE.';}, 50)
     btns.forEach((elem) => elem.style.visibility = 'hidden');
     removeDirectionsButton();
     makePlayAgainButton()
