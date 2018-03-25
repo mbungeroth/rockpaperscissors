@@ -184,3 +184,7 @@ button:focus, button:hover, button:active, button:after {
   grid-column: 2 / 3;
   justify-self: center;
 }
+
+#pabutton {
+  font-size: 1em;
+}
